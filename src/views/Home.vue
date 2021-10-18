@@ -78,7 +78,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore/lite";
-import { db  , analytics } from "../main";
+import { db, analytics } from "../main";
 import router from "../router/index";
 
 export default {
@@ -91,9 +91,14 @@ export default {
         nombre: "",
         correo: "",
       },
-      texto:{
-        name:"",
-      }
+      texto: {
+        name: "",
+      },
+    };
+  },
+  metaInfo() {
+    return {
+      title: "Screen Name",
     };
   },
   methods: {
