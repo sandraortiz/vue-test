@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore/lite';
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDF3MX2SzdanQXlOGWFudqTPjX37JJljDo",
@@ -21,7 +22,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const analytics =  firebase.analytics();
+const analytics = getAnalytics();
+
 export { db ,  analytics };
 
 createApp(App).use(store).use(router).mount('#app')
