@@ -19,7 +19,13 @@ const firebaseConfig = {
   appId: "1:240431790898:web:9177b6136423434ef6752b",
   measurementId: "G-RMVYFT7QCS"
 };
+import { getAnalytics } from "firebase/analytics";
 
+const analytics = getAnalytics();
+logEvent(analytics, 'notification_received');
+
+
+export {  analytics}
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
