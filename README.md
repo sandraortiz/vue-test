@@ -1,6 +1,6 @@
-# Atención acuérdate de intalar los Módulos
+# landing-pee
 
-## Instala los modulos, vete a terminal, nuevo terminal y escribe:
+## Project setup
 ```
 npm install
 ```
@@ -13,6 +13,11 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
 ```
 
 ### Customize configuration
