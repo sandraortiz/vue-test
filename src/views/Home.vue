@@ -55,7 +55,6 @@
         <tr v-for="(item, index) in textos" :key="index">
           <th scope="row">{{ index }}</th>
           <td>{{ item.name }}</td>
-          <!-- <td>{{ item.correo }}</td> -->
           <td>
             <button
               @click.prevent="eliminarDato(item.id)"
@@ -78,7 +77,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore/lite";
-import { db, analytics } from "../main";
+import { db } from "../main";
 import router from "../router/index";
 
 export default {
@@ -94,11 +93,6 @@ export default {
       texto: {
         name: "",
       },
-    };
-  },
-  metaInfo() {
-    return {
-      title: "Screen Name",
     };
   },
   methods: {

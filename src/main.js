@@ -12,19 +12,20 @@ import { getFirestore } from 'firebase/firestore/lite';
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDF3MX2SzdanQXlOGWFudqTPjX37JJljDo",
-  authDomain: "fir-3cd29.firebaseapp.com",
-  projectId: "fir-3cd29",
-  storageBucket: "fir-3cd29.appspot.com",
-  messagingSenderId: "669805638608",
-  appId: "1:669805638608:web:2b40046fd5b4a7c52bbfd5"
+  apiKey: "AIzaSyBOTcZL3g_TS3aZ-JtbPuMw7WJEivPW0i8",
+  authDomain: "vue-firebase-test-7404a.firebaseapp.com",
+  projectId: "vue-firebase-test-7404a",
+  storageBucket: "vue-firebase-test-7404a.appspot.com",
+  messagingSenderId: "240431790898",
+  appId: "1:240431790898:web:9177b6136423434ef6752b",
+  measurementId: "G-RMVYFT7QCS"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const analytics = getAnalytics();
 
-export { db ,  analytics };
+export { db , analytics };
 
 createApp(App).use(store).use(router).mount('#app')
 
