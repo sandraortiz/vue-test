@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <router-link to="/about" tag="button">Inica sesion</router-link>
+    <br><br>
     <form>
       <div class="input-group mb-3">
         <span class="input-group-text">Nombre</span>
@@ -17,55 +19,7 @@
         </button>
       </div>
     </form>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">id</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Correo</th>
-          <th scope="col">Eliminar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(item, index) in usuarios" :key="index">
-          <th scope="row">{{ index }}</th>
-          <td>{{ item.nombre }}</td>
-          <td>{{ item.correo }}</td>
-          <td>
-            <button
-              @click.prevent="eliminarDato(item.id)"
-              class="btn btn-danger"
-            >
-              Eliminar
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">id</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Correo</th>
-          <th scope="col">Eliminar</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(item, index) in textos" :key="index">
-          <th scope="row">{{ index }}</th>
-          <td>{{ item.name }}</td>
-          <td>
-            <button
-              @click.prevent="eliminarDato(item.id)"
-              class="btn btn-danger"
-            >
-              Eliminar
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  
   </div>
 </template>
 
